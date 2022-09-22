@@ -64,6 +64,9 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("Great Britain")) {
             return "2016";
         }
+        if (query.toLowerCase().contains("James Bond")) {
+            return "Sean Connery";
+        }
         /* 
         if (query.toLowerCase().contains("prime")) {
             for (int i = 0; i < )

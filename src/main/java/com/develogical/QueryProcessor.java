@@ -1,4 +1,5 @@
 package com.develogical;
+import java.util.List;
 
 public class QueryProcessor {
 
@@ -13,6 +14,17 @@ public class QueryProcessor {
         }
         if (query.toLowerCase().contains("what is your name")) {
             return "jzpaspsk";
+        }
+        if (query.toLowerCase().contains("largest numbers")) {
+            String[] numbers = query.split(",");
+            int max = Integer.parseInt(numbers[1]);
+            for (int i = 2; i < numbers.length; i++) {
+                int val = Integer.parseInt(numbers[i]);
+                if (val > max) {
+                    max = val;
+                }
+            }
+
         }
         return "";
     }

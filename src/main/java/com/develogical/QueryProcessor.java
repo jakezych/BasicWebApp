@@ -15,6 +15,7 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("what is your name")) {
             return "jzpaspsk";
         }
+        /*
         if (query.toLowerCase().contains("numbers is the largest")) {
             String[] n = query.split(":");
             String[] numbers = n[1].split(",");
@@ -27,6 +28,7 @@ public class QueryProcessor {
             }
             return Integer.toString(max);
         }
+        */
         if (query.toLowerCase().contains("what is plus")) {
             String[] all = query.split(" ");
             return Integer.toString(Integer.parseInt(all[all.length - 1]) + Integer.parseInt(all[all.length - 3]));
@@ -52,7 +54,7 @@ public class QueryProcessor {
 
         }
         if (query.toLowerCase().contains("Great Britain")) {
-            return "2017";
+            return "2016";
         }
         return "";
     }

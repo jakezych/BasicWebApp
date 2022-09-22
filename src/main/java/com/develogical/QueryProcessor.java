@@ -16,7 +16,8 @@ public class QueryProcessor {
             return "jzpaspsk";
         }
         if (query.toLowerCase().contains("numbers is largest")) {
-            String[] numbers = query.split(",");
+            String[] n = query.split(":");
+            String[] numbers = n[1].split(",");
             int max = Integer.parseInt(numbers[1]);
             for (int i = 2; i < numbers.length; i++) {
                 int val = Integer.parseInt(numbers[i]);

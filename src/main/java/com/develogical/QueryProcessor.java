@@ -26,6 +26,9 @@ public class QueryProcessor {
             }
 
         }
+        if (query.toLowerCase().contains("what is plus")) {
+            return "+";
+        }
         return "";
     }
 }

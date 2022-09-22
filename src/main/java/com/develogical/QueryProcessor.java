@@ -28,8 +28,15 @@ public class QueryProcessor {
             return Integer.toString(max);
         }
         if (query.toLowerCase().contains("what is plus")) {
-            return "+";
+            String[] all = query.split(" ");
+            return Integer.toString(Integer.parseInt(all[all.length - 1]) + Integer.parseInt(all[all.length - 3]));
+        }
+        if (query.toLowerCase().contains("what is multiplied")) {
+            String[] all = query.split(" ");
+            return Integer.toString(Integer.parseInt(all[all.length - 1]) * Integer.parseInt(all[all.length - 4]));
         }
         return "";
     }
 }
+//=info method=GET path="/api?q=f10aad60:%20what%20is%206%20plus%208"
+// %20what%20is%204%20multiplied%20by%203

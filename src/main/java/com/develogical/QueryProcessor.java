@@ -51,6 +51,9 @@ public class QueryProcessor {
             return "0";
 
         }
+        if (query.toLowerCase().contains("Great Britain")) {
+            return "2017";
+        }
         return "";
     }
 }

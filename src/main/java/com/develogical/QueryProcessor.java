@@ -18,14 +18,14 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("numbers is largest")) {
             String[] n = query.split(":");
             String[] numbers = n[1].split(",");
-            int max = Integer.parseInt(numbers[1]);
-            for (int i = 2; i < numbers.length; i++) {
-                int val = Integer.parseInt(numbers[i]);
+            int max = Integer.parseInt(numbers[0].trim());
+            for (int i = 1; i < numbers.length; i++) {
+                int val = Integer.parseInt(numbers[i].trim());
                 if (val > max) {
                     max = val;
                 }
             }
-
+            return Integer.toString(max);
         }
         if (query.toLowerCase().contains("what is plus")) {
             return "+";

@@ -35,4 +35,9 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what is your name"), containsString("jzpaspsk"));
     }
 
+
+    @Test
+    public void testNumbers() {
+        assertThat(queryProcessor.process("which of the following numbers is largest: 2000, 1100, 10"), containsString("2000"));
+    }
 }

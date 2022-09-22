@@ -15,7 +15,7 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("what is your name")) {
             return "jzpaspsk";
         }
-        /*
+        /* 
         if (query.toLowerCase().contains("numbers is the largest")) {
             String[] n = query.split(":");
             String[] numbers = n[1].split(",");
@@ -29,14 +29,21 @@ public class QueryProcessor {
             return Integer.toString(max);
         }
         */
-        if (query.toLowerCase().contains("what is plus")) {
+        if (query.toLowerCase().contains("plus")) {
             String[] all = query.split(" ");
             return Integer.toString(Integer.parseInt(all[all.length - 1]) + Integer.parseInt(all[all.length - 3]));
         }
-        if (query.toLowerCase().contains("what is multiplied")) {
+
+        if (query.toLowerCase().contains("minus")) {
+            String[] all = query.split(" ");
+            return Integer.toString(Integer.parseInt(all[all.length - 3]) - Integer.parseInt(all[all.length - 1]));
+        }
+
+        if (query.toLowerCase().contains("multiplied")) {
             String[] all = query.split(" ");
             return Integer.toString(Integer.parseInt(all[all.length - 1]) * Integer.parseInt(all[all.length - 4]));
         }
+        /*
         if (query.toLowerCase().contains("is both a square and a cube")) {
             String[] n = query.split(":");
             String[] numbers = n[1].split(",");
@@ -53,10 +60,23 @@ public class QueryProcessor {
             return "0";
 
         }
+        */
         if (query.toLowerCase().contains("Great Britain")) {
             return "2016";
         }
+        /* 
+        if (query.toLowerCase().contains("prime")) {
+            for (int i = 0; i < )
+            boolean flag = false;
+            for (int i = 2; i <= num / 2; ++i) {
+              // condition for nonprime number
+              if (num % i == 0) {
+                flag = true;
+                break;
+              }
+            }
+        }
+        */
         return "";
     }
 }
-//%20which%20of%20the%20following%20numbers%20is%20both%20a%20square%20and%20a%20cube:%20223,%202401,%20784,%20151"

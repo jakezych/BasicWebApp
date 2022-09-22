@@ -30,8 +30,4 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("hello world"), containsString("hello"));
     }
 
-    @Test
-    public void thisShouldBreak() {
-        assertThat("hello", is("goodbye"));
-    }
 }

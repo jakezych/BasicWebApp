@@ -67,6 +67,11 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("James Bond")) {
             return "Sean Connery";
         }
+        if (query.toLowerCase().contains("Fibonacci")) {
+            String place = query.split(" ")[3];
+            int num = Integer.parseInt(place.substring(0, place.length() - 2));
+            return Integer.toString(fibonacci(num));
+        }
         /* 
         if (query.toLowerCase().contains("prime")) {
             for (int i = 0; i < )
@@ -82,4 +87,12 @@ public class QueryProcessor {
         */
         return "";
     }
+public int fibonacci(int n) {
+    if(n == 0)
+        return 0;
+    else if(n == 1)
+        return 1;
+    else
+        return fibonacci(n - 1) + fibonacci(n - 2);
+}
 }

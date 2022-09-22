@@ -36,6 +36,19 @@ public class QueryProcessor {
             return Integer.toString(Integer.parseInt(all[all.length - 1]) * Integer.parseInt(all[all.length - 4]));
         }
         if (query.toLowerCase().contains("is both a square and a cube")) {
+            String[] n = query.split(":");
+            String[] numbers = n[1].split(",");
+            for (int i = 0; i < numbers.length; i++) {
+                int number = Integer.parseInt(numbers[i]);
+                double result2 = Math.pow(number, 1.0 / 2);
+                double result3 = Math.pow(number, 1.0 / 3);
+                if ((result2 == Math.floor(result2)) && !Double.isInfinite(result2)) {
+                    if ((result3 == Math.floor(result3)) && !Double.isInfinite(result3)) {
+                        return Integer.toString(number);
+                    }
+                }
+            }
+            return "0";
 
         }
         return "";
